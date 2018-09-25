@@ -8,17 +8,23 @@ interface IArticle {
     getFulltitle(): string;
 }
 
-class Book implements IArticle {
+class Article {
     author: string;
     title: string;
-    constructor(author: string, title: string) {
-        this.author = author;
-        this.title = title;
-    }
 
     getFulltitle(): string {
-        return '';
+        return this.title;
     }
 }
+
+function news (article: IArticle) {
+    let title = article.getFulltitle();
+}
+
+let mbc = new Article();
+news(mbc);
+
+mbc.getFulltitle();
+
 
 
